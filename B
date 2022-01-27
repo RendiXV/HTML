@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+
+<h2>Belajar Form</h2>
+        <form action="" method="post">
+
+        <label for="">Nilai : </label>
+        <input type="number" name="No"><br><br>
+        
+        <button type="submit" name="Proses">Proses</button><br>
+    </form>
+    <?php 
+    
+    if(isset($_POST['Proses'])){
+        $nilai = $_POST['No'];       
+
+        if($nilai >= 75 && $nilai < 101){
+            echo "$nilai anda lulus";
+        }elseif($nilai <= 74 && $nilai >= 0 ){
+            echo "$nilai anda Tidak Lulus";
+
+        }
+        else{
+            echo "<br>";
+            echo "nilai $nilai = Tidak Falid";
+        }
+    }
+    ?>
+    
+</body>
+</html>
